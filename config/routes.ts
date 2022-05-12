@@ -1,5 +1,24 @@
 ﻿export default [
   {
+    path: '/parameters',
+    layout: false,
+    routes: [
+      {
+        name: 'sub-roles',
+        path: '/parameters/subRoles',
+        component: './parameters/SubRoles',
+      },
+      {
+        name: 'indemnity',
+        path: '/parameters/indemnity',
+        component: './parameters/Indemnity',
+      },
+      {
+        component: './404',
+      },
+    ],
+  },
+  {
     path: '/user',
     layout: false,
     routes: [
