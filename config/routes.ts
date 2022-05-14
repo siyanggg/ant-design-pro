@@ -48,6 +48,20 @@
     ],
   },
   {
+    path: '/layOut',
+    layout: false,
+    routes: [
+      {
+        name: 'layOut',
+        path: '/layOut',
+        component: './layOut',
+      },
+      {
+        component: './404',
+      },
+    ],
+  },
+  {
     path: '/user',
     layout: false,
     routes: [
