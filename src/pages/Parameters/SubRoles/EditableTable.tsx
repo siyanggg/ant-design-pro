@@ -189,6 +189,7 @@ class EditableTable extends React.Component {
     });
     return (
       <div>
+        <h1>EditableTable: </h1>
         <Button
           onClick={this.handleAdd}
           type="primary"

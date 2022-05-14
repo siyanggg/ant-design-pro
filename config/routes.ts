@@ -6,12 +6,41 @@
       {
         name: 'sub-roles',
         path: '/parameters/subRoles',
-        component: './parameters/SubRoles',
+        component: './Parameters/SubRoles',
       },
       {
         name: 'indemnity',
         path: '/parameters/indemnity',
-        component: './parameters/Indemnity',
+        component: './Parameters/Indemnity',
+      },
+      {
+        component: './404',
+      },
+    ],
+  },
+
+  {
+    path: '/proTable',
+    layout: false,
+    routes: [
+      {
+        name: 'proTable',
+        path: '/proTable',
+        component: './proTable',
+      },
+      {
+        component: './404',
+      },
+    ],
+  },
+  {
+    path: '/editableProTable',
+    layout: false,
+    routes: [
+      {
+        name: 'editableProTable',
+        path: '/editableProTable',
+        component: './editableProTable',
       },
       {
         component: './404',
