@@ -1,4 +1,5 @@
 import { Select, Space } from 'antd';
+import { DeleteFilled } from '@ant-design/icons';
 
 type MandateGroupTypeLocal = {
   disabled: boolean;
@@ -116,7 +117,7 @@ const ExpandedRowAPDropdownGroup = ({
                 marginRight: '8px',
                 display: 'flex',
                 flexDirection: 'row',
-                alignItem: 'centre',
+                alignItem: 'center',
                 justifyContent: 'space-around',
               }}
             >
@@ -135,7 +136,7 @@ const ExpandedRowAPDropdownGroup = ({
         style={{ width: '100%' }}
         options={dropdownGroupOptions}
         onChange={(value: string) => onSelectGroup(value)}
-      ></Select>
+      />
     </Space>
   );
 };
