@@ -1,9 +1,11 @@
 import DragDropSortTable from './DragDropSortTable';
+import MyProLayOut from './MyProLayOut';
 
 const EditableProTable = () => {
   return (
     <div>
-      <DragDropSortTable />
+      {/* <DragDropSortTable /> */}
+      <MyProLayOut />
       <br />
     </div>
   );

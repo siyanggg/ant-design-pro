@@ -48,6 +48,20 @@
     ],
   },
   {
+    path: '/learnings',
+    layout: false,
+    routes: [
+      {
+        name: 'learnings',
+        path: '/learnings',
+        component: './Learnings',
+      },
+      {
+        component: './404',
+      },
+    ],
+  },
+  {
     path: '/layOut',
     layout: false,
     routes: [

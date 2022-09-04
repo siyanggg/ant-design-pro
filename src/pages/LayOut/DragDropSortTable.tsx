@@ -28,7 +28,7 @@ const data = [
   },
 ];
 
-export default () => {
+export default function DragDropSortTable() {
   const columns: ProColumns[] = [
     {
       title: '排序',
@@ -116,4 +116,4 @@ export default () => {
       />
     </>
   );
-};
+}
