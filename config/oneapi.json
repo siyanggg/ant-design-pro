@@ -13,6 +13,26 @@
     }
   ],
   "paths": {
+    "/api/subRolesData": {
+      "summary": "getSubRolesData",
+      "description": "SubRolesData",
+      "get": {
+        "tags": ["api"],
+        "operationId": "getSUbRolesData",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SubRolesData"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/api/currentUser": {
       "get": {
         "tags": ["api"],

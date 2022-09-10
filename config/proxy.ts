@@ -8,12 +8,19 @@
  */
 export default {
   dev: {
-    // localhost:8000/api/** -> https://preview.pro.ant.design/api/**
-    '/api/': {
+    // localhost:8000/api/** -> https://internal-mcp-web-sg.sit.ocbc.com:8843/api/customer-mandate-sg/api/**
+    // for ms-customer-mandate-sg
+    '/v1/': {
       // 要代理的地址
-      target: 'https://preview.pro.ant.design',
+      target: 'https://internal-mcp-web-sg.sit.ocbc.com:8843/api/customer-mandate-sg',
       // 配置了这个可以从 http 代理到 https
       // 依赖 origin 的功能可能需要这个，比如 cookie
+      changeOrigin: true,
+    },
+    // for login:
+    '/sam12/authenticate/samldc': {
+      target: 'https://internal-mcp-web-sg.sit.ocbc.com:8843/api/staff-security-sg',
+      secure: false,
       changeOrigin: true,
     },
   },

@@ -1,0 +1,30 @@
+{
+    "IMAGE_NAME": "mfe-dbr-customer-mandate",
+    "IMAGE_VERSION": "1.0.0",
+    "APPLICATION_NAME": "mfe-dbr-customer-mandate",
+    "NAMESPACE": "channels-sg",
+    "APP_CONFMAP_NAME": "mfe-dbr-customer-mandate",
+    "SUMMON_CONF_NAME": "mfe-dbr-customer-mandate-summon-config",
+    "COUNTRY": "sg",
+    "ROLLOUT_DEPLOYMENT": "true",
+    "sit": {
+        "APP_CONFMAP FILE": "app.env",
+        "ROUTE_NAME": "mfe-dbr-customer-mandate-sg.apps.dev.ocbc.com"
+    },
+    "uat": {
+        "APP_CONFMAP_FILE": "app.env",
+        "ROUTE_NAME": "mfe-dbr-customer-mandate-sg-apps.uat.ocbc.com"
+    },
+    "prod1": {
+        "APP_CONFMAP_FILE": "app.env",
+        "ROUTE NAME": "mfe-dbr-customer-mandate-sg"
+    },
+    "prod2": {
+        "APP_CONFMAP_FILE": "app.env",
+        "ROUTE NAME": "mfe-dbr-customer-mandate-sg"
+    },
+    "dr": {
+        "APP_CONFMAP_FILE": "app.env",
+        "ROUTE NAME": "mfe-dbr-customer-mandate-sg"
+    }
+}

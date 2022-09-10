@@ -1,32 +1,125 @@
 ﻿export default [
   {
+    path: '/home',
+    name: 'home',
+    icon: 'smile',
+    component: './home/index',
+  },
+  {
+    path: '/mandate',
+    icon: 'smile',
+    flatMenu: true,
+    component: './mandate/index',
+    routes: [
+      {
+        path: '/mandate/coporate-details',
+        icon: 'smile',
+        flatMenu: true,
+        component: './mandate/CorporateDetails/index',
+        routes: [
+          {
+            path: '/mandate/coporate-details/create',
+            name: 'mandate.coporate-details.create',
+            icon: 'smile',
+            component: './mandate/CorporateDetails/Create/index',
+          },
+          {
+            path: '/mandate/coporate-details/details',
+            name: 'mandate.coporate-details.details',
+            icon: 'smile',
+            component: './mandate/CorporateDetails/Details/index',
+          },
+        ],
+      },
+      {
+        path: '/mandate/connected-persons',
+        icon: 'smile',
+        flatMenu: true,
+        component: './mandate/ConnectedPersons/index',
+        routes: [
+          {
+            path: '/mandate/connected-persons/summary',
+            icon: 'smile',
+            component: './mandate/ConnectedPersons/Summary/index',
+          },
+          {
+            path: '/mandate/connected-persons/details',
+            icon: 'smile',
+            component: './mandate/ConnectedPersons/Details/index',
+          },
+        ],
+      },
+      {
+        path: '/mandate/br',
+        icon: 'smile',
+        flatMenu: true,
+        component: './mandate/BoardResolutions/index',
+        routes: [
+          {
+            path: '/mandate/br/summary',
+            icon: 'smile',
+            component: './mandate/BoardResolutions/Summary/index',
+          },
+        ],
+      },
+      {
+        path: '/mandate/assc',
+        icon: 'smile',
+        flatMenu: true,
+        component: './mandate/ASSigningConditions/index',
+      },
+      {
+        path: '/mandate/m&a',
+        icon: 'smile',
+        flatMenu: true,
+        component: './mandate/MemorandumArticles/index',
+      },
+      {
+        path: '/mandate/indemnity',
+        icon: 'smile',
+        flatMenu: true,
+        component: './mandate/Indemnity/index',
+      },
+      {
+        path: '/mandate/common-usage',
+        icon: 'smile',
+        flatMenu: true,
+        component: './mandate/CommonUsage/index',
+      },
+    ],
+  },
+  {
     path: '/parameters',
-    layout: false,
+    name: 'parameters',
+    icon: 'smile',
+    flatMenu: true,
+    component: './parameters',
     routes: [
       {
-        name: 'sub-roles',
-        path: '/parameters/subRoles',
-        component: './Parameters/SubRoles',
+        path: '/parameters/br',
+        component: './parameters/BoardResolutions',
+        routes: [
+          {
+            path: '/parameters/br/inquiry',
+            component: './parameters/BoardResolutions/pages/Inquiry',
+          },
+          {
+            path: '/parameters/br/add',
+            component: './parameters/BoardResolutions/pages/Add',
+          },
+          {
+            path: '/parameters/br/details',
+            component: './parameters/BoardResolutions/pages/Details',
+          },
+        ],
       },
       {
-        name: 'indemnity',
         path: '/parameters/indemnity',
-        component: './Parameters/Indemnity',
+        component: './parameters/Indemnity',
       },
       {
-        component: './404',
-      },
-    ],
-  },
-
-  {
-    path: '/proTable',
-    layout: false,
-    routes: [
-      {
-        name: 'proTable',
-        path: '/proTable',
-        component: './proTable',
+        path: '/parameters/roles',
+        component: './parameters/SubRoles',
       },
       {
         component: './404',
@@ -34,50 +127,15 @@
     ],
   },
   {
-    path: '/editableProTable',
-    layout: false,
-    routes: [
-      {
-        name: 'editableProTable',
-        path: '/editableProTable',
-        component: './editableProTable',
-      },
-      {
-        component: './404',
-      },
-    ],
-  },
-  {
-    path: '/learnings',
-    layout: false,
-    routes: [
-      {
-        name: 'learnings',
-        path: '/learnings',
-        component: './Learnings',
-      },
-      {
-        component: './404',
-      },
-    ],
-  },
-  {
-    path: '/layOut',
-    layout: false,
-    routes: [
-      {
-        name: 'layOut',
-        path: '/layOut',
-        component: './layOut',
-      },
-      {
-        component: './404',
-      },
-    ],
+    path: '/accessMatrix',
+    name: 'access-matrix',
+    icon: 'smile',
+    flatMenu: true,
+    component: './AccessMatrix',
   },
   {
     path: '/user',
-    layout: false,
+    layOut: false,
     routes: [
       {
         name: 'login',
@@ -85,43 +143,17 @@
         component: './user/Login',
       },
       {
-        component: './404',
-      },
-    ],
-  },
-  {
-    path: '/welcome',
-    name: 'welcome',
-    icon: 'smile',
-    component: './Welcome',
-  },
-  {
-    path: '/admin',
-    name: 'admin',
-    icon: 'crown',
-    access: 'canAdmin',
-    component: './Admin',
-    routes: [
-      {
-        path: '/admin/sub-page',
-        name: 'sub-page',
-        icon: 'smile',
-        component: './Welcome',
+        path: '/user/logout',
+        component: './user/Logout',
       },
       {
         component: './404',
       },
     ],
-  },
-  {
-    name: 'list.table-list',
-    icon: 'table',
-    path: '/list',
-    component: './TableList',
   },
   {
     path: '/',
-    redirect: '/welcome',
+    redirect: '/home',
   },
   {
     component: './404',
