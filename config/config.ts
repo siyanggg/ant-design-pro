@@ -114,7 +114,7 @@ export default defineConfig({
     APP_ENV_MANDATE_MEMORANDDUM_ARTICLES_INQUIRY: '/v1/corporates/memorandum-articles/search',
     APP_ENV_MANDATE_MEMORANDDUM_ARTICLES_SAVE: '/v1/corporates/memorandum-articles/save',
   },
-  qiankun: {
-    slave: {},
-  },
+  // qiankun: {
+  //   slave: {},
+  // },
 });
